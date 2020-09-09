@@ -1,5 +1,8 @@
 import React,{Component} from 'react';
 import Field from '../../Components/FormField';
+import Input from '../../Components/FormInput';
+import {signInWithGoogle} from '../../firebase/firebase';
+import './signin.scss';
 class Signin extends Component{
     constructor(){
         super();
@@ -24,13 +27,17 @@ class Signin extends Component{
     }
     render(){
         const {onChange,handleSubmit}=this;
-        return<div>
-            <h2>I allready have an account</h2>
+        return<div className="signin">
+            <h2 className="title">I allready have an account</h2>
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
             <Field type="email" name="Email"  action={onChange}/>
             <Field type="password" name="Password" action={onChange}/>
-            <input type="submit" value="submit form"/>
+            <div className="buttons">
+
+            <Input type="submit" name="Sign in"/>
+            <Input onClick={signInWithGoogle} isGoogleSignIn name="Sign With Google"/>
+            </div>
             </form>
         </div>;
     }
