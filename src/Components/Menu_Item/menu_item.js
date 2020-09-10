@@ -2,8 +2,8 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import './menu_item.scss';
 const item=({props,history,match})=>{
-    const {title,imageUrl,size,linkUrl}=props;
-return (<div 
+    const {title,imageUrl,size,linkUrl,key}=props;
+return (<div key={key}
   className={`${size} menu-item`}
 
   onClick={()=>{history.push(`${match.url}${linkUrl}`)

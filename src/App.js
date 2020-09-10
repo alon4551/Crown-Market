@@ -3,8 +3,8 @@ import Homepage from './Pages/homepage';
 import Shop from './Pages/Shop';
 import {Route, Switch} from 'react-router-dom';
 import Header from './Components/Header';
-import Signin from './Pages/Signin';
-import {auth} from './firebase/firebase';
+import Signin_Signup from './Pages/Signin_Signup';
+import {auth,createUserProfile} from './firebase/firebase';
 import './App.css';
 
 class App extends Component {
@@ -16,8 +16,21 @@ class App extends Component {
   }
   unSubscribeFromAuth=null;
   componentDidMount(){
-    this.unSubscribeFromAuth= auth.onAuthStateChanged(user=>{
-      this.setState({currentUser:user});
+    this.unSubscribeFromAuth= auth.onAuthStateChanged(async userAuth=>{
+      if(userAuth){
+        const userRef= await createUserProfile(userAuth);
+        userRef.onSnapshot(snapshot=>{
+          this.setState({
+            currentUser:{
+              id:snapshot.id,
+              ...snapshot.data()
+            }
+          },()=>console.log(this.state.currentUser))
+          
+        });
+      }
+      else
+      this.setState({currentUser:userAuth});
     })
   }
   componentWillUnmount(){
@@ -30,7 +43,7 @@ class App extends Component {
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route exact path ='/shop' component={Shop}/>
-        <Route exact path ='/signin' component={Signin}/>
+        <Route exact path ='/signin' component={Signin_Signup}/>
       </Switch>
     </div>
   );
