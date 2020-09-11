@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Homepage from './Pages/homepage';
 import Shop from './Pages/Shop';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import Header from './Components/Header';
 import Signin_Signup from './Pages/Signin_Signup';
 import {auth,createUserProfile} from './firebase/firebase';
@@ -35,21 +35,34 @@ class App extends Component {
     this.unSubscribeFromAuth();
   }
   render(){
+    const {currentUser}=this.props;
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route exact path ='/shop' component={Shop}/>
-        <Route exact path ='/signin' component={Signin_Signup}/>
+        <Route exact path ='/signin' 
+        render={()=>
+          currentUser
+          ?
+          (<Redirect to="/"/>)
+          :
+          (<Signin_Signup/>)
+        }
+        />
+        
       </Switch>
     </div>
   );
   }
 }
 
+const mapStateToProps=({user})=>({
+  currentUser:user.currentUser
+})
 const mapDispatchToProps=dispach=>({
   setCurrentUser:user=>dispach(setCurrentUser(user))
 })
 
-export default connect(null,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
