@@ -4,10 +4,14 @@ import Shop from './Pages/Shop';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Header from './Components/Header';
 import Signin_Signup from './Pages/Signin_Signup';
+import Checkout from './Pages/checkout';
 import {auth,createUserProfile} from './firebase/firebase';
 import {setCurrentUser} from './redux/user/user.actions';
+import {selectCurrentUser} from './redux/user/user.selectors';
+import {createStructuredSelector }from 'reselect';
 import {connect} from 'react-redux';
 import './App.css';
+import checkout from './Pages/checkout/checkout';
 
 class App extends Component {
   
@@ -51,6 +55,7 @@ class App extends Component {
           (<Signin_Signup/>)
         }
         />
+        <Route exact path ='/checkout' component={checkout}/>
         
       </Switch>
     </div>
@@ -58,8 +63,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps=({user})=>({
-  currentUser:user.currentUser
+const mapStateToProps=createStructuredSelector({
+  currentUser:selectCurrentUser
 })
 const mapDispatchToProps=dispach=>({
   setCurrentUser:user=>dispach(setCurrentUser(user))
