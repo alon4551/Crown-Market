@@ -41,7 +41,7 @@ const sections = [
 class homepage extends Component{
 
     render(){
-        const cards=sections.map((item)=><Item props={item}/>)
+        const cards=sections.map((item)=><Item key={item.id} props={item}/>)
         return(<div className="homepage">
             <div className="directory-menu ">
 
