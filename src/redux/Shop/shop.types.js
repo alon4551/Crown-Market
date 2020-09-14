@@ -1,4 +1,0 @@
-export const shopTypes={
-    GET_SHOP_PREVIEW:'GET_SHOP_PREVIEW',
-    GET_SECTION:'GET_SECTION'
-}
