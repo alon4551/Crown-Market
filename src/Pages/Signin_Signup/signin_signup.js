@@ -4,9 +4,6 @@ import Signup from '../Signup';
 import './signin_signup.scss';
 
 class Signin_Signup extends Component{
-    constructor(){
-        super();
-    }
     render(){
         return(<div className="sign-in-and-sign-up">
             <Signin />

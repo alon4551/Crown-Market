@@ -4,7 +4,6 @@ import Shop from './Pages/Shop';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Header from './Components/Header';
 import Signin_Signup from './Pages/Signin_Signup';
-import Checkout from './Pages/checkout';
 import {auth,createUserProfile} from './firebase/firebase';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selectors';
@@ -45,14 +44,14 @@ class App extends Component {
       <Header />
       <Switch>
         <Route exact path='/' component={Homepage}/>
-        <Route exact path ='/shop' component={Shop}/>
+        <Route path ='/shop' component={Shop}/>
         <Route exact path ='/signin' 
         render={()=>
           currentUser
           ?
           (<Redirect to="/"/>)
           :
-          (<Signin_Signup/>)
+          <Signin_Signup/>
         }
         />
         <Route exact path ='/checkout' component={checkout}/>

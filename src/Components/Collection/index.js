@@ -1,2 +1,2 @@
-import Collection from './collection';
-export default Collection;
+import CollectionPage from './collection';
+export default CollectionPage;

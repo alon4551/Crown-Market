@@ -7,7 +7,6 @@ return (<div key={key}
   className={`${size} menu-item`}
 
   onClick={()=>{history.push(`${match.url}${linkUrl}`)
-  console.log(linkUrl);
   }}
   >
 
