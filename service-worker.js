@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/alon4551/Crown-Market/precache-manifest.94e92da96a461bed3b70f4a6b3f530d1.js"
+  "/alon4551/Crown-Market/precache-manifest.e4a9e7d78ba52c95ea59102940c59fe1.js"
 );
 
 self.addEventListener('message', (event) => {
