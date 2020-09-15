@@ -19,7 +19,7 @@ const Cart =({cartItems,history,dispatch})=>(<div className="cart-dropdown">
 </div>
 <Input name="GO TO CHECKOUT" onClick={()=>{
     dispatch(toggleCartHidden());
-    history.push('/checkout');
+    history.push(`${process.env.PUBLIC_URL}/checkout`);
     }} type="button"/> 
 </div>);
 const mapStateToProps=createStructuredSelector({

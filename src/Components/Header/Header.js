@@ -13,7 +13,7 @@ import './Header.scss';
 const Header=({currentUser,hidden})=>{
 
     return (<div className="header">
-        <Link className="logo-container" to='/'>
+        <Link className="logo-container" to={`${process.env.PUBLIC_URL}/`}>
             <Logo className="logo"></Logo>
         </Link>
         <div className="options">
@@ -21,15 +21,15 @@ const Header=({currentUser,hidden})=>{
             currentUser?
             <div className="option" onClick={()=>auth.signOut()}>SignOut</div>
             :
-            <Link className="option" to='/signin'>
+            <Link className="option" to={`${process.env.PUBLIC_URL}/signin`}>
             Sign in
           </Link>
           }
       
-        <Link className="option" to='/shop'>
+        <Link className="option" to={`${process.env.PUBLIC_URL}/shop`}>
             SHOP
         </Link>
-        <Link className="option" to='/shop'>
+        <Link className="option" to={`${process.env.PUBLIC_URL}/shop`}>
           CONTANT
         </Link>
         <Icon/>

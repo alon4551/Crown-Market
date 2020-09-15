@@ -24,7 +24,7 @@
     "redux-persist": "^6.0.0",
     "reselect": "^4.0.0"
   },
-  "homepage": "https://github.io/alon4551/Crown-Market",
+  "homepage": "https://alon4551.github.io/Crown-Market",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

@@ -43,18 +43,18 @@ class App extends Component {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path='/' component={Homepage}/>
-        <Route path ='/shop' component={Shop}/>
-        <Route exact path ='/signin' 
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage}/>
+        <Route path ={`${process.env.PUBLIC_URL}/shop`} component={Shop}/>
+        <Route exact path ={`${process.env.PUBLIC_URL}/signin`}
         render={()=>
           currentUser
           ?
-          (<Redirect to="/"/>)
+          (<Redirect to={`${process.env.PUBLIC_URL}/`}/>)
           :
           <Signin_Signup/>
         }
         />
-        <Route exact path ='/checkout' component={checkout}/>
+        <Route exact path ={`${process.env.PUBLIC_URL}/checkout`} component={checkout}/>
         
       </Switch>
     </div>
