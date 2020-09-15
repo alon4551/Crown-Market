@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f68752f2c3c43ecfc855914ceaeaf515",
+    "revision": "1271ba7ea4e2f989e7a49d43eefd3ea5",
     "url": "/Crown-Market/index.html"
   },
   {
-    "revision": "e6c663c730096f98c9be",
+    "revision": "f7876428020b46a987d4",
     "url": "/Crown-Market/static/css/main.a11a74f5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Crown-Market/static/js/2.7fe4e110.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e6c663c730096f98c9be",
-    "url": "/Crown-Market/static/js/main.67086e44.chunk.js"
+    "revision": "f7876428020b46a987d4",
+    "url": "/Crown-Market/static/js/main.c046b6c2.chunk.js"
   },
   {
     "revision": "b66fbac8f205d846e9cd",
