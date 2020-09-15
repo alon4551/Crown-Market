@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectCollectionItem } from '../../redux/Shop/shop.selectors';
+import Spiner from '../with-spiner';
 import Item from '../Collection_Item';
 import './collection.scss';
 const CollectionPage = ({ collection }) => {
     if(!collection)
-    return (<div> 404 not found</div>)
+    return (<Spiner/>)
     const {title,items}=collection;
     console.log(collection);
     return (<div className="collection-page">

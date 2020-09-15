@@ -31,10 +31,34 @@ const config={
     return userRef;
       
   }
+  export const addCollectionAndDocuments= async (collectionKey,objectToAdd)=>{
+    const collectionRef=firestore.collection(collectionKey);
+    const batch=firestore.batch();
+    objectToAdd.forEach(obj => {
+      const newDocRef=collectionRef.doc();
+      batch.set(newDocRef,obj);
+    });
+    await batch.commit();
+  }
+
   firebase.initializeApp(config);
   export const auth =firebase.auth();
   export const firestore=firebase.firestore();
-
+export const convertCollectionsSnapshopToMap=collections=>{
+  const transformCollections=collections.docs.map(doc=>{
+    const {title,items} =doc.data();
+    return{
+      title,
+      items,
+      routeName:encodeURI(title.toLowerCase()),
+      id:doc.id
+    }
+  });
+  return transformCollections.reduce((acc,item)=>{
+    acc[item.title.toLowerCase()]=item;
+    return acc;
+  },{})
+}
   const provider=new firebase.auth.GoogleAuthProvider();
   provider.setCustomParameters({promt:'select_account'});
   export const signInWithGoogle =()=>auth.signInWithPopup(provider);

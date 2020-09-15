@@ -10,18 +10,25 @@ const COLLECTION_ID_MAP={
 }
 const selectShop=state=>state.shop;
 
+export const selectShopForPreview=createSelector(
+    [selectShop],
+    data=>Object.keys(data).map(key => ({
+        ...data[key]
+    }))
+)
+
 export const selectShopItems=createSelector(
     [selectShop],
-    (data)=>Object.keys(data).map(key=>data[key].items)
+    (data)=>data?Object.keys(data).map(key=>data[key].items):[]
 )
 export const selectShopPreview=createSelector(
     [selectShop],
-    (data)=>Object.keys(data).map(key => ({
+    (data)=>data? Object.keys(data).map(key => ({
         ...data[key],
         items:data[key].items.filter((i,ind)=>ind<4)
-    }))
+    })):[]
 )
 export const selectCollectionItem=memoize((collectionUrl)=>createSelector(
     [selectShop],
-    (collections)=>collections[collectionUrl]
+    (collections)=>collections? collections[collectionUrl]:null
 ));
