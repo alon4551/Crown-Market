@@ -3,5 +3,27 @@
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+    .signup,
+      .signin{
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding :10px;
+      }
+      $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      justify-items: center;
+      .signup,
+      .signin{
+        text-align: center;
+        margin: 10 auto;
+      }
+    }
   }
   

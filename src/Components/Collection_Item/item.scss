@@ -46,5 +46,14 @@
         width: 10%;
       }
     }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+     
+     width: 100%;
+     .image{
+       height: 100%;
+       width: 100%;
+     }
+    }
   }
   

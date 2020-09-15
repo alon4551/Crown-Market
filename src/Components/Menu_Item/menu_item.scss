@@ -8,6 +8,8 @@
     border: 1px solid black;
     margin: 0 7.5px 15px;
     overflow: hidden;
+
+    
     &:hover {
       cursor: pointer;
     
@@ -60,6 +62,22 @@
       .subtitle {
         font-weight: lighter;
         font-size: 16px;
+      }
+      
+    }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+      min-width: 100%;
+      .background-image{
+        height: 100%;
+        width: 100%;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .large{
+        height: 240px;
       }
       
     }

@@ -17,5 +17,12 @@
         margin-bottom: 30px;
       }
     }
+    $breakpoint-tablet: 768px;
+    @media (max-width: $breakpoint-tablet) {
+     
+     .items{
+      grid-template-columns: repeat(auto-fit, minmax(284px,1fr))
+     } 
+    }
   }
   

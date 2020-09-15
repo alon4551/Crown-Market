@@ -9,8 +9,10 @@
     }
   
     .preview {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(284px,1fr));
+     
     }
+   
   }
   
