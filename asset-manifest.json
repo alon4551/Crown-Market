@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Crown-Market/static/css/main.a11a74f5.chunk.css",
-    "main.js": "/Crown-Market/static/js/main.4a92c43b.chunk.js",
-    "main.js.map": "/Crown-Market/static/js/main.4a92c43b.chunk.js.map",
+    "main.js": "/Crown-Market/static/js/main.43a9caab.chunk.js",
+    "main.js.map": "/Crown-Market/static/js/main.43a9caab.chunk.js.map",
     "runtime-main.js": "/Crown-Market/static/js/runtime-main.e716b1d4.js",
     "runtime-main.js.map": "/Crown-Market/static/js/runtime-main.e716b1d4.js.map",
     "static/js/2.852aec52.chunk.js": "/Crown-Market/static/js/2.852aec52.chunk.js",
     "static/js/2.852aec52.chunk.js.map": "/Crown-Market/static/js/2.852aec52.chunk.js.map",
     "index.html": "/Crown-Market/index.html",
-    "precache-manifest.c94b77359ca68e4963808b42daac32cb.js": "/Crown-Market/precache-manifest.c94b77359ca68e4963808b42daac32cb.js",
+    "precache-manifest.0e747e50a7cc184995e84d32aef2054c.js": "/Crown-Market/precache-manifest.0e747e50a7cc184995e84d32aef2054c.js",
     "service-worker.js": "/Crown-Market/service-worker.js",
     "static/css/main.a11a74f5.chunk.css.map": "/Crown-Market/static/css/main.a11a74f5.chunk.css.map",
     "static/js/2.852aec52.chunk.js.LICENSE.txt": "/Crown-Market/static/js/2.852aec52.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e716b1d4.js",
     "static/js/2.852aec52.chunk.js",
     "static/css/main.a11a74f5.chunk.css",
-    "static/js/main.4a92c43b.chunk.js"
+    "static/js/main.43a9caab.chunk.js"
   ]
 }
