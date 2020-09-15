@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Crown-Market/precache-manifest.7724021b7e0f4c9ce8d7cab43f0141b7.js"
+  "/Crown-Market/precache-manifest.170a8ea9550533f0ef392e82e0de7cc4.js"
 );
 
 self.addEventListener('message', (event) => {

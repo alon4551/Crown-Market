@@ -1,6 +1,6 @@
 import { shopTypes } from './shop.types';
 const INITIAL_STATE = {
-  data: [
+  hats:
     {
       id: 1,
       title: 'Hats',
@@ -62,7 +62,7 @@ const INITIAL_STATE = {
         }
       ]
     },
-    {
+    sneakers: {
       id: 2,
       title: 'Sneakers',
       routeName: 'sneakers',
@@ -117,7 +117,7 @@ const INITIAL_STATE = {
         }
       ]
     },
-    {
+    jackets:{
       id: 3,
       title: 'Jackets',
       routeName: 'jackets',
@@ -154,7 +154,7 @@ const INITIAL_STATE = {
         }
       ]
     },
-    {
+    womens:{
       id: 4,
       title: 'Womens',
       routeName: 'womens',
@@ -203,7 +203,7 @@ const INITIAL_STATE = {
         }
       ]
     },
-    {
+    mens:{
       id: 5,
       title: 'Mens',
       routeName: 'mens',
@@ -246,20 +246,24 @@ const INITIAL_STATE = {
         }
       ]
     }
-  ]
 }
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case shopTypes.GET_SHOP_PREVIEW: {
       return {...state,
-        data:state.data.filter((item, ind) => ind < 4)
+        data:state.map(section=>{return {
+          ...section,
+          items:section.items.filter((item, ind) => ind < 4)
+        }
+      })
       }
     }
     case shopTypes.GET_SECTION:{
+      
       return {
         ...state,
-        data:state.filter((item)=>item.routeName===action.payload)
+        data:Object.keys(state).filter((item)=>item.routeName===action.payload)
       }
     }
     default:
