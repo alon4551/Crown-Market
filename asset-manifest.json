@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Crown-Market/static/css/main.a11a74f5.chunk.css",
+    "main.css": "/Crown-Market/static/css/main.b45bb5b8.chunk.css",
     "main.js": "/Crown-Market/static/js/main.8768d172.chunk.js",
     "main.js.map": "/Crown-Market/static/js/main.8768d172.chunk.js.map",
     "runtime-main.js": "/Crown-Market/static/js/runtime-main.e716b1d4.js",
@@ -8,9 +8,9 @@
     "static/js/2.a39905d3.chunk.js": "/Crown-Market/static/js/2.a39905d3.chunk.js",
     "static/js/2.a39905d3.chunk.js.map": "/Crown-Market/static/js/2.a39905d3.chunk.js.map",
     "index.html": "/Crown-Market/index.html",
-    "precache-manifest.7724021b7e0f4c9ce8d7cab43f0141b7.js": "/Crown-Market/precache-manifest.7724021b7e0f4c9ce8d7cab43f0141b7.js",
+    "precache-manifest.170a8ea9550533f0ef392e82e0de7cc4.js": "/Crown-Market/precache-manifest.170a8ea9550533f0ef392e82e0de7cc4.js",
     "service-worker.js": "/Crown-Market/service-worker.js",
-    "static/css/main.a11a74f5.chunk.css.map": "/Crown-Market/static/css/main.a11a74f5.chunk.css.map",
+    "static/css/main.b45bb5b8.chunk.css.map": "/Crown-Market/static/css/main.b45bb5b8.chunk.css.map",
     "static/js/2.a39905d3.chunk.js.LICENSE.txt": "/Crown-Market/static/js/2.a39905d3.chunk.js.LICENSE.txt",
     "static/media/crown.ed28accb.svg": "/Crown-Market/static/media/crown.ed28accb.svg",
     "static/media/shopping-bag.30f07071.svg": "/Crown-Market/static/media/shopping-bag.30f07071.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.e716b1d4.js",
     "static/js/2.a39905d3.chunk.js",
-    "static/css/main.a11a74f5.chunk.css",
+    "static/css/main.b45bb5b8.chunk.css",
     "static/js/main.8768d172.chunk.js"
   ]
 }
